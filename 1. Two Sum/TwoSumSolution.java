@@ -9,7 +9,7 @@ public class TwoSumSolution {
         this.target = target;
     }
 
-    public int[] TwoSum() {
+    public int[] twoSum() {
         int[] output = new int[2];
         int temp;
         for (int i = 0; i < nums.length; i++) {

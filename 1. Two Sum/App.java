@@ -16,7 +16,7 @@ public class App {
         int target = app.scanner.nextInt();
 
         TwoSumSolution solution = new TwoSumSolution(size, nums, target);
-        int[] output = solution.TwoSum();
+        int[] output = solution.twoSum();
         printArray(output);
     }
 
