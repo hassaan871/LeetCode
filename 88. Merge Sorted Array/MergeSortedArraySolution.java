@@ -2,9 +2,9 @@ import java.util.Scanner;
 
 public class MergeSortedArraySolution {
     int m,n;
-    int[] nums1 = new int[m];
-    int[] nums2 = new int[n];
-    int[] arr = new int[m+n];
+    int[] nums1;
+    int[] nums2;
+    int[] arr;
 
 
     public MergeSortedArraySolution(){
@@ -22,6 +22,9 @@ public class MergeSortedArraySolution {
         System.out.println("Enter n: ");
         n = scanner.nextInt();
 
+        nums1 = new int[m];
+        nums2 = new int[n];
+
         System.out.println("Enter nums1 : ");
         for(int i=0; i<m; i++){
             nums1[i] =  scanner.nextInt();
@@ -36,12 +39,12 @@ public class MergeSortedArraySolution {
     public int[] arraySort(int[] arr){
         for(int i=0; i<arr.length; i++){
             for(int j=i+1; j<arr.length; j++){
-                int n = arr[i];
+                int temp = arr[i];
                 if(arr[i] <= arr[j]){
                     continue;
                 }else{
                     arr[i] = arr[j];
-                    arr[j] = n;
+                    arr[j] = temp;
                 }
             }
         }
